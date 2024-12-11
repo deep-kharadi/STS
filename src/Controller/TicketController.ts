@@ -97,7 +97,9 @@ const TicketController = {
 				return {
 					client: ticket.client,
 					issue: ticket.issue,
-					status: ticket.status, // Here we keep the actual status (open/closed)
+					status: ticket.status, // Here we keep the actual status (open/closed),
+					deadline: ticket.deadline, // Here we keep the actual status (open/closed)
+
 				}
 			})
 			const workbook = XLSX.utils.book_new()

@@ -3,8 +3,8 @@
     "target": "es2016",             /* Node.js supports modern ECMAScript features */
     "module": "commonjs",           /* Use CommonJS module system for Node.js */
     "lib": ["es2016"],              /* Include ES2018 library definitions */
-    "rootDir": "src",               /* Specify the root folder within your source files */
-    "outDir": "build",              /* Specify an output folder for all emitted files */
+    "rootDir": "./src",               /* Specify the root folder within your source files */
+    "outDir": "./dist",           /* Specify an output folder for all emitted files */
     "esModuleInterop": true,        /* Emit additional JavaScript to ease support for importing CommonJS modules */
     "resolveJsonModule": true,      /* Enable importing .json files directly */
 
@@ -15,8 +15,12 @@
     "strictBindCallApply": true,    /* Check that the arguments for 'bind', 'call', and 'apply' methods match the original function */
     "noImplicitThis": true,         /* Enable error reporting when 'this' is given the type 'any' */
 
-    "skipLibCheck": true            /* Skip type checking all .d.ts files */
+    "skipLibCheck": true,            /* Skip type checking all .d.ts files */
+    "types": ["jest"],
   },
-  "include": ["src/**/*.ts"],       /* Specify the files to include in the compilation */
-  "exclude": ["node_modules","ui"]        /* Specify the files to exclude from the compilation */
+  "include": [ 
+    "src/**/*",
+    "__tests__/**/*" 
+  ],       /* Specify the files to include in the compilation */
+  "exclude": ["node_modules","dist"]        /* Specify the files to exclude from the compilation */
 }

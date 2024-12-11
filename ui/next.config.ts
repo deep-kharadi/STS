@@ -18,15 +18,15 @@ const nextConfig: NextConfig = {
 		// your project has ESLint errors.
 		ignoreDuringBuilds: true,
 	},
-  async redirects() {
-    return [
-      {
-        source: '/', // Root route
-        destination: '/tickets', // Redirect to tickets listing
-        permanent: true, // Set to true if this is a permanent redirect
-      },
-    ];
-  },
+	async redirects() {
+		return [
+			{
+				source: "/", // Root route
+				destination: "/tickets", // Redirect to tickets listing
+				permanent: true, // Set to true if this is a permanent redirect
+			},
+		];
+	},
 }
 
 export default nextConfig

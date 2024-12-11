@@ -7,8 +7,8 @@ class TicketService implements ITicketService {
 		return await TicketModel.find().sort({ deadline: -1 })
 	}
 	async getTicketById(id: string) {
-        return await TicketModel.findById(id);
-    }
+		return await TicketModel.findById(id);
+	}
 	async createTicket(ticketData: TicketRegisterRequest) {
 		const newTicket = new TicketModel(ticketData)
 		return await newTicket.save()
