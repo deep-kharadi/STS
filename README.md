@@ -13,7 +13,7 @@ This is a Ticket Management System built using Node.js, Express, and TypeScript.
 
 ## File Structure
 
-my-node-app/
+sts/
 │
 ├── src/
 │   ├── controllers/
@@ -33,26 +33,55 @@ my-node-app/
 └── README.md
 
 
+UI Structure
+app/
+├── tickets/
+│   ├── page.tsx 
+│   ├── create-ticket/
+│   │   ├── page.tsx
+│   ├── update-ticket/
+│   │   ├── page.tsx
+
+
 
 ## Installation
 
 ### Prerequisites
 
 - **Node.js**: Make sure you have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
-- **MongoDB**: Ensure you have MongoDB installed and running, or use a cloud-based MongoDB service.
+- **MongoDB**: Ensure you have MongoDB installed and running
+
+npm --v
+10.9.2
+node --version
+v20.10.0
+Next.js 
+15.0.4
+
 
 ### Setup
 
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository-url>
-   cd my-node-app
+   git clone https://github.com/deep-kharadi/STS
 
+2. **Backend Setup**:
 
 npm install
 MONGODB_URI=mongodb://localhost:27017/sts
 PORT=8000
 npm run build
 npm start
-npm test
+
+3. **UI Setup**:
+
+cd ui
+npm install
+npm run build
+npm start
+or 
+npm run dev
+
+4. **API Documentation**
+https://documenter.getpostman.com/view/21550386/2sAYHwHjUB
