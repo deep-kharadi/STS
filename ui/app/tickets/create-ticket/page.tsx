@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Container, TextField, Button, Typography, MenuItem } from "@mui/material";
-import api from "../../utils/api";
+import { Container, TextField, Button, Typography, MenuItem, Link } from "@mui/material";
+import api from "../../../utils/api";
 import { useRouter } from "next/navigation"; // Import useRouter from Next.js
 
 export default function CreateTicketPage() {
@@ -62,21 +62,14 @@ export default function CreateTicketPage() {
           margin="normal"
           InputLabelProps={{ shrink: true }}
         />
-        {/* <TextField
-          select
-          label="Status"
-          name="status"
-          value={formData.status}
-          onChange={handleChange}
-          fullWidth
-          margin="normal"
-        >
-          <MenuItem value="open">Open</MenuItem>
-          <MenuItem value="closed">Closed</MenuItem>
-        </TextField> */}
         <Button variant="contained" color="primary" type="submit">
           Create Ticket
         </Button>
+        <Link href="/tickets">
+        <Typography variant="body2" style={{ color: 'blue', cursor: 'pointer' }}>
+          Cancel
+        </Typography>
+      </Link>
       </form>
     </Container>
   );

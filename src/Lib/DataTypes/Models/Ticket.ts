@@ -5,8 +5,8 @@ export type CommonModelType = {
 }
 
 export type TicketModelType<T> = T & {
-    status: string
-    issue: Date
+    status: "open" | "closed"
+    issue: string
     client: string
     deadline: Date
 }

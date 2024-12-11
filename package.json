@@ -20,7 +20,14 @@
   "homepage": "https://github.com/deep-kharadi/STS#readme",
   "description": "",
   "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
     "@types/express": "^5.0.0",
+    "@types/jest": "^27.0.1",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "http-errors": "^2.0.0",
@@ -29,15 +36,17 @@
     "morgan": "^1.10.0",
     "node-input-validator": "^4.5.1",
     "password-hash": "^1.2.2",
+    "web-vitals": "^2.1.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@swc-node/core": "^1.13.3",
     "@swc-node/register": "^1.10.9",
     "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
     "@types/jsonwebtoken": "^9.0.7",
     "@types/morgan": "^1.9.9",
-    "@types/node": "^22.10.1",
+    "@types/node": "^16.7.13",
     "@types/password-hash": "^1.2.24",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -48,6 +57,6 @@
     "eslint-plugin-promise": "^6.6.0",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "typescript": "^4.4.2"
   }
 }

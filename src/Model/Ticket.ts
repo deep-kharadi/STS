@@ -1,15 +1,16 @@
 import mongoose, { Document, Schema } from "mongoose"
-import type { CommonModelType, TicketModelType } from "../Lib/DataTypes/Models/Ticket"
+import type { CommonModelType, TicketModelType } from "../lib/dataTypes/models/Ticket"
 
 
 const TicketSchema = new Schema<TicketModelType<CommonModelType & Document>>({
 	status: {
 		type: String,
+		enum: ["open", "closed"], // Enforce allowed values
 		required: true,
-		unique: true
+		default: "open"
 	},
 	issue: {
-		type: Date,
+		type: String,
 		required: true
 	},
 	client: {

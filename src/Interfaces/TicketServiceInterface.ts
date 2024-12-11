@@ -1,8 +1,8 @@
-import { TicketRegisterRequest, TicketUpdateRequest } from "../Lib/DataTypes/Requests";
+import { TicketRegisterRequest, TicketUpdateRequest } from "../lib/dataTypes/requests"
 
 
 export interface ITicketService {
-    getAllTickets(): Promise<any[]>; // Change to specific return type later
-    createTicket(ticketData: TicketRegisterRequest): Promise<any>; // Change to specific return type
-    updateTicket(id: string, updateData: TicketUpdateRequest): Promise<any>; // Change to specific return type
+    getAllTickets(): Promise<any[]>; 
+    createTicket(ticketData: TicketRegisterRequest): Promise<any>; 
+    updateTicket(id: string, updateData: TicketUpdateRequest): Promise<any>; 
 }

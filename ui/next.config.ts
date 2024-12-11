@@ -1,15 +1,4 @@
-// import type { NextConfig } from "next";
 
-// const nextConfig: NextConfig = {
-//   /* config options here */
-//   eslint: {
-//     // Warning: This allows production builds to successfully complete even if
-//     // your project has ESLint errors.
-//     ignoreDuringBuilds: true,
-//   },
-// };
-
-// export default nextConfig;
 import { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
@@ -29,6 +18,15 @@ const nextConfig: NextConfig = {
 		// your project has ESLint errors.
 		ignoreDuringBuilds: true,
 	},
+  async redirects() {
+    return [
+      {
+        source: '/', // Root route
+        destination: '/tickets', // Redirect to tickets listing
+        permanent: true, // Set to true if this is a permanent redirect
+      },
+    ];
+  },
 }
 
 export default nextConfig
