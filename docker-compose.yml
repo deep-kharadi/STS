@@ -2,12 +2,12 @@ version: '3.9'
 services:
   backend:
     build:
-      context: ./ # Adjust the path to your backend directory
+      context: ./backend # Adjust the path to your backend directory
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
     volumes:
-      - ./:/usr/src/app
+      - ./backend:/usr/src/app
       - /usr/src/app/node_modules
     environment:
       - NODE_ENV=development
@@ -16,12 +16,12 @@ services:
 
   frontend:
     build:
-      context: ./ui # Frontend directory
+      context: ./frontend # Frontend directory
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
-      - ./ui:/usr/src/app # Mount the frontend source code
+      - ./frontend:/usr/src/app # Mount the frontend source code
     environment:
       - NODE_ENV=development
       - PORT=3000
