@@ -53,8 +53,10 @@ app/
 
 npm --v
 10.9.2
+
 node --version
 v20.10.0
+
 Next.js 
 15.0.4
 
@@ -69,7 +71,7 @@ Next.js
 2. **Backend Setup**:
 
 npm install
-MONGODB_URI=mongodb://localhost:27017/sts
+MONGODB_URI=//set url in env file or use given config at 6.
 PORT=8000
 npm run build
 npm start
@@ -85,3 +87,14 @@ npm run dev
 
 4. **API Documentation**
 https://documenter.getpostman.com/view/21550386/2sAYHwHjUB
+
+5. **Docker Configuration**
+docker-compose build
+docker-compose up
+docker-compose down
+docker-compose up --build
+
+6. **Mongodb Configuration**
+"mongodb+srv://deepkharadi9:3ANArrcd9QzvBXl3@cluster0.swl8d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+7.**Assume status open is by default when ticket create **
