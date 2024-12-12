@@ -4,9 +4,10 @@
   "main": ".eslintrc.js",
   "scripts": {
     "test": "jest",
-    "start": "eslint . --ext .ts  --fix && nodemon",
+    "start": "nodemon",
     "dev": "nodemon",
-    "lint": "eslint . --ext .ts --fix"
+    "lint": "eslint . --ext .ts --fix",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

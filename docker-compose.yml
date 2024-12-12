@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: ./ # Adjust the path to your backend directory
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=8000
+    command: npm start # Use "npm start" for production
+
+  frontend:
+    build:
+      context: ./ui # Frontend directory
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./ui:/usr/src/app # Mount the frontend source code
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    command: npm run dev
